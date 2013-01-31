@@ -1,272 +1,253 @@
-document.addEventListener("deviceready", onDeviceReady, false);
-
-// Apache Cordova is ready
-function onDeviceReady() {
+(function($, doc) {
+	var _app,
+    	_mapElem,
+    	_mapObj,
+    	_storeListElem,
+    	_private,
+    	_appData = new AppData(),
+    	_isOnline = true,
+    	_tmplStoreList;
     
-}
-
-(function($, console, doc) {
-    var _app,
-		_mapElem,
-		_mapObj,
-		_storeListElem,
-		_private,
-		_appData = new AppData(),
-		_announcementData,
-		_isOnline = true,
-		_tmplStoreList,
-		//UI ELEMENTS
-		$announcementsEle = $("#announcements-listview");
-
-	_announcementData = [
-    		{ title: "Holiday Drinks Are Here", description: "Enjoy your favorite holiday drinks, like Pumpkin Spice Lattes.", url: "images/holiday.png" },
-    		{ title: "Register & Get Free Drinks", description: "Register any Jitterz card and start earning rewards like free drinks. Sign-up now.", url: "images/rewards.png" },
-    		{ title: "Cheers to Another Year", description: "Raise a cup of bold and spicy Jitterz Anniversary Blend.", url: "images/cheers.png" },
-    		{ title: "Hot Drinks Anytime", description: "Find and enjoy our, hot drinks anytime.", url: "images/hot-drink.png" },
-    		{ title: "Friend and Love", description: "Get more for your friends.Get Love.", url: "images/love-friend.png" },
-    		{ title: "Wide range of choice", description: "Raise a cup of bold and spicy Jitterz Anniversary Blend.", url: "images/best-coffee.png" }
-    	];
-    
-    //Private methods
+	//Private methods
 	_private = {
-		getLocation: function(options){
+		getLocation: function(options) {
 			var dfd = new $.Deferred();
 
 			//Default value for options
-			if(options === undefined){ options = {enableHighAccuracy: true}; }
+			if (options === undefined) {
+				options = {enableHighAccuracy: true};
+			}
 
 			navigator.geolocation.getCurrentPosition(
-				function(position){ 
+				function(position) { 
 					dfd.resolve(position);
 				}, 
-				function(error){
+				function(error) {
 					dfd.reject(error);
 				}, 
 				options);
 
 			return dfd.promise();
 		},
-		initMap: function(position){
+		
+		initMap: function(position) {
 			//Delcare function variables
 			var myOptions,
-				mapObj = _mapObj,
-				mapElem = _mapElem,
-				pin,
-				locations = [];
+    			mapObj = _mapObj,
+    			mapElem = _mapElem,
+    			pin,
+    			locations = [],
+                latlng;
 
 			_mapElem = mapElem; //Cache DOM element
                 
-			//TODO: Don't reinit entire map if already iniatlized in the app
-			
-				console.log("INITIALIZING MAP")
-				// Use Google API to get the location data for the current coordinates
-				latlng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+			// Use Google API to get the location data for the current coordinates
+			latlng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
 				
-				myOptions = {
-					zoom: 12,
-					center: latlng,
-					mapTypeControl: false,
-					navigationControlOptions: { style: google.maps.NavigationControlStyle.SMALL },
-					mapTypeId: google.maps.MapTypeId.ROADMAP
-				};
+			myOptions = {
+				zoom: 12,
+				center: latlng,
+				mapTypeControl: false,
+				navigationControlOptions: { style: google.maps.NavigationControlStyle.SMALL },
+				mapTypeId: google.maps.MapTypeId.ROADMAP
+			};
 			    
-				mapObj = new google.maps.Map(mapElem, myOptions);
-				_mapObj = mapObj; //Cache at app level
+			mapObj = new google.maps.Map(mapElem, myOptions);
+			_mapObj = mapObj; //Cache at app level
 			    
-			    
+			pin = [
+				{
+					position: latlng,
+					title: "Your Location"
+				}
+			];
 
-			    pin = [{
-			    	position: latlng,
-			    	title: "Your Location"
-			    }];
-
-			    _private.addMarkers(pin, mapObj);
+			_private.addMarkers(pin, mapObj);
 			
-		    
 			// Get stores nearby
 			_appData.getStarbucksLocations(position.coords.latitude, position.coords.longitude)
-				.done(function(result){
-					var len = result.length,
-						pinImage = new google.maps.MarkerImage("../images/cofeeCup-sprite.png",
-												   new google.maps.Size(49, 49),
-												   new google.maps.Point(0, 202),
-												   new google.maps.Point(0, 32));
+			.done(function(result) {
+				var len = result.length,
+				    pinImage = new google.maps.MarkerImage(
+                                    "../images/cofeeCup-sprite.png",
+                                    new google.maps.Size(49, 49),
+                                    new google.maps.Point(0, 202),
+                                    new google.maps.Point(0, 32)
+                                    );
 
-						markerImage = new google.maps.MarkerImage('icons/coffeecupbutton.png');
-
-					for (var i = 0; i < len; i++) {
-                        locations.push({
-							title: result[i].WalkInAddressDisplayStrings[0] + ", " + result[i].WalkInAddressDisplayStrings[1],
-							position: new google.maps.LatLng(result[i].WalkInAddress.Coordinates.Latitude, result[i].WalkInAddress.Coordinates.Longitude),
-							icon: pinImage,
-							animation: google.maps.Animation.DROP
-						});
-					}
-
-					_private.addMarkers(locations, mapObj);
-				})
-				.fail(function(error){
-					alert("Error loading locations.");
-				});
-		},
-		addMarkers: function(locations, mapObj){
-            var marker,
-    		currentMarkerIndex = 0;
-    		function createMarker(index) {
-    			if (index < locations.length){
-    				var tmpLocation = locations[index];
-
-    				marker = new google.maps.Marker({
-    					position:tmpLocation.position,
-    					map:mapObj,
-    					title:tmpLocation.title,
-    					icon: tmpLocation.icon,
-    					shadow: tmpLocation.shadow,
-    					animation: tmpLocation.animation
-    				});
-    			    oneMarkerAtTime();
-                }
-    		}
-            
-    		createMarker(0);
-    		function oneMarkerAtTime() {
-    			google.maps.event.addListener(marker, "animation_changed", function() {
-    				if (marker.getAnimation() == null) {
-    					createMarker(currentMarkerIndex+=1);
-    				}
-    			});
-    		}
-		},
-		initStoreList: function(position){
-			_appData.getStarbucksLocations(position.coords.latitude, position.coords.longitude)
-				.done(function(data){
-					//TODO: Bind data to listview
-					$(_storeListElem).kendoMobileListView({
-						dataSource: kendo.data.DataSource.create({ data: data }),
-						template: _tmplStoreList
+				for (var i = 0; i < len; i++) {
+					locations.push({
+						title: result[i].WalkInAddressDisplayStrings[0] + ", " + result[i].WalkInAddressDisplayStrings[1],
+						position: new google.maps.LatLng(result[i].WalkInAddress.Coordinates.Latitude, result[i].WalkInAddress.Coordinates.Longitude),
+						icon: pinImage,
+						animation: google.maps.Animation.DROP
 					});
-				})
-				.fail();
+				}
+
+				_private.addMarkers(locations, mapObj);
+			})
+			.fail(function() {
+				alert("Error loading locations.");
+			});
 		},
-		toggleStoreView: function(index){
+        
+		addMarkers: function(locations, mapObj) {
+			var marker,
+			    currentMarkerIndex = 0;
+            
+            function createMarker(index) {
+				if (index < locations.length) {
+					var tmpLocation = locations[index];
+
+					marker = new google.maps.Marker({
+						position:tmpLocation.position,
+						map:mapObj,
+						title:tmpLocation.title,
+						icon: tmpLocation.icon,
+						shadow: tmpLocation.shadow,
+						animation: tmpLocation.animation
+					});
+                    
+					oneMarkerAtTime();
+				}
+			}
+            
+			function oneMarkerAtTime() {
+				google.maps.event.addListener(marker, "animation_changed", function() {
+					if (marker.getAnimation() === null) {
+						createMarker(currentMarkerIndex+=1);
+					}
+				});
+			}				
+            
+            createMarker(0);
+
+		},
+        
+		initStoreList: function(position) {
+			_appData.getStarbucksLocations(position.coords.latitude, position.coords.longitude)
+        			.done(function(data) {
+        				//TODO: Bind data to listview
+        				$(_storeListElem).kendoMobileListView({
+        					dataSource: kendo.data.DataSource.create({ data: data }),
+        					template: _tmplStoreList
+        				});
+        			})
+        			.fail();
+		},
+        
+		toggleStoreView: function(index) {
 			var isMap = (index === 0);
-			if(isMap){
+            
+			if (isMap) {
 				$(_storeListElem).hide();
 				$(_mapElem).show();
-			}else{
+			} else {
 				$(_storeListElem).show();
 				$(_mapElem).hide();
 			}
 		}
 	};
     
-    _app = {
-        init: function() {
-            console.log(window.localStorage.getItem("cards"));
-            if(window.localStorage.getItem("cards") === null)
-            {
-                var cardData = new initialCardData(),
-                initialCards = cardData.getInitialCardsData();
-                localStorage.setItem("cards", initialCards);
-            }
-        },
-        announcementListViewTemplatesInit: function() {
-            $announcementsEle.kendoMobileListView({
-    			dataSource: kendo.data.DataSource.create({ data: _announcementData }),
-    			template: $("#announcement-listview-template").html()
-    		});
-    	},
+	_app = {
+		init: function() {
+			announcementViewModel.load(_appData.getAnnouncements());
+            
+            if (window.localStorage.getItem("cards") === null) {
+				localStorage.setItem("cards", _appData.getInitialCards());
+			}
+            
+            cardsViewModel.loadFromLocalStorage();
+		},
         
-    	onAddCardViewShow: function () {
-    		$('#cardNumberField').focus();
-    	},
+		onAddCardViewShow: function () {
+			$('#cardNumberField').focus();
+		},
         
             
-    	rewardCardShow: function(e) {
-            var bonusPoints = e.view.params.bonusPoints,
-                cardNumber = e.view.params.cardNumber;
+		rewardCardShow: function(e) {
+			var bonusPoints = e.view.params.bonusPoints,
+			    cardNumber = e.view.params.cardNumber;
             
-            rewardsViewModel.setValues(cardNumber, bonusPoints);
+			rewardsViewModel.setValues(cardNumber, bonusPoints);
             
-    	},
+		},
         
-        rewardCardInit: function(e) {
-            var container = e.view.content;
-                $cardFront = container.find("#rewardCardFront"),
-                $cardBack = container.find("#rewardCardBack");
+		rewardCardInit: function(e) {
+			var container = e.view.content,
+    			$cardFront = container.find("#rewardCardFront"),
+    			$cardBack = container.find("#rewardCardBack");
             
-            singleCardViewModel.appendCardFadeEffect($cardFront, $cardBack);
-        },
+			singleCardViewModel.appendCardFadeEffect($cardFront, $cardBack);
+		},
         
-    	singleCardShow: function (arguments) {
-        	var cardNumber = arguments.view.params.cardNumber
-                bonusPoints = arguments.view.params.bonusPoints,
-                cardAmount = arguments.view.params.cardAmount;
+		singleCardShow: function (args) {
+			var cardNumber = args.view.params.cardNumber,
+    			bonusPoints = args.view.params.bonusPoints,
+    			cardAmount = args.view.params.cardAmount;
             
-           singleCardViewModel.setValues(cardNumber, bonusPoints, cardAmount);
-    	},
+			singleCardViewModel.setValues(cardNumber, bonusPoints, cardAmount);
+		},
         
-        singleCardInit: function(e) {
-            var container = e.view.content;
-                $cardFront = container.find("#cardFront"),
-                $cardBack = container.find("#cardBack");
+		singleCardInit: function(e) {
+			var container = e.view.content,
+    			$cardFront = container.find("#cardFront"),
+    			$cardBack = container.find("#cardBack");
             
-            singleCardViewModel.appendCardFadeEffect($cardFront, $cardBack);
-        },
+			singleCardViewModel.appendCardFadeEffect($cardFront, $cardBack);
+		},
         
-        storesInit: function(){
+		storesInit: function() {
 			_mapElem = document.getElementById("map");
 			_storeListElem = document.getElementById("storeList");
 			_tmplStoreList = kendo.template($("#tmplStoreListItem").html());
 
-
 			$("#btnStoreViewToggle").data("kendoMobileButtonGroup")
-				.bind("select", function(e){
+			.bind("select", function(e) {
 				_private.toggleStoreView(e.sender.selectedIndex);
-			})
+			});
 		},
         
-        storesShow: function() {
-    		//Don't attempt to reload map/sb data if offline
-            console.log("ONLINE", _isOnline);
-    		if(_isOnline === false){				
-    			alert("Please reconnect to the Internet to load locations.");
+		storesShow: function() {
+			//Don't attempt to reload map/sb data if offline
+			//console.log("ONLINE", _isOnline);
+			if (_isOnline === false) {				
+				alert("Please reconnect to the Internet to load locations.");
     
-    			return;
-    		}
+				return;
+			}
     
-    		_private.getLocation()
-    			.done(function(position){ 
-                    _private.initStoreList(position);
-                    _private.initMap(position); 
-    			})
-    			.fail(function(error){ 
-    				alert(error.message); /*TODO: Better handling*/ 
-    			});
+			_private.getLocation()
+			.done(function(position) { 
+				_private.initStoreList(position);
+				_private.initMap(position); 
+			})
+			.fail(function(error) { 
+				alert(error.message); /*TODO: Better handling*/ 
+			});
             
-            if(_isOnline === true){
-                $("#stores").show();
-                $(".offline").hide();
-            }else{
-                $("#stores").hide();
-                $(".offline").show();
-            }
-    	}
-    }
+			if (_isOnline === true) {
+				$("#stores").show();
+				$(".offline").hide();
+			}
+			else {
+				$("#stores").hide();
+				$(".offline").show();
+			}
+		}
+	};
     
-    _app.init();
-	cardsData.init();
-    cardsData.cards.bind("change", writeIntoLocalStorage);
-    
-    $.extend(window, {
-		cardsData: _app.cardsData,
+	_app.init();
+        
+	$.extend(window, {
+		cardsViewModel: _app.cardsViewModel,
 		rewardCardShow: _app.rewardCardShow,
-        rewardCardInit: _app. rewardCardInit,
+		rewardCardInit: _app.rewardCardInit,
 		singleCardShow: _app.singleCardShow,
-        singleCardInit: _app.singleCardInit,
+		singleCardInit: _app.singleCardInit,
 		onAddCardViewShow: _app.onAddCardViewShow,
-        announcementListViewTemplatesInit: _app.announcementListViewTemplatesInit,
-        storezShow: _app.storesShow,
-        storesInit: _app.storesInit,
+		announcementData: _app.announcementData,
+		onStoresShow: _app.storesShow,
+		storesInit: _app.storesInit
 	});
-}(jQuery, console, document));
+}(jQuery, document));

@@ -2,7 +2,7 @@
 	<div data-role="header">
 		<div data-role="navbar">
 			<a href="#cardsView" data-role="button" data-align="left">Cancel</a>
-            <span data-role="view-title"></span>
+            <span data-role="view-title"></span><span  data-bind="text: canAddCard"></span>
             <button data-role="button" data-align="right" id="buttonAddNewCardView"  data-bind="enabled: canAddCard, events: { click: addNewCard }">Add</button>
 		</div>
 	</div>

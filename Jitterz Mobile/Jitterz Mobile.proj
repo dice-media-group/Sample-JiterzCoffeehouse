@@ -82,8 +82,6 @@
     <Content Include="kendo\styles\kendo.mobile.all.min.css" />
     <Content Include="kendo\styles\kendo.jitterz.mobile.all.css" />
     <Content Include="scripts\appData.js" />
-    <Content Include="scripts\card.js" />
-    <Content Include="scripts\cardsData.json" />
     <Content Include="scripts\main.js" />
     <Content Include="styles\main.css" />
     <Content Include="cordova.ios.js">

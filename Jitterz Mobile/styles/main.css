@@ -1,7 +1,6 @@
 #announcements
 {
     margin: 12px;
-    padding: 3px;
     background: rgba(255, 255, 255, 0.7);
     border-radius: 6px;
 }
@@ -71,6 +70,10 @@
 	line-height: 1em;
     margin: 0 0 0 1em;
     width: 61%;
+}
+
+#announcements-listview {
+    margin: 0;
 }
 
 .km-ios #home .km-list
@@ -444,6 +447,6 @@ input::-webkit-inner-spin-button {
 
 #buttonAddNewCardView[disabled] {
     opacity:0.5;
-    pointer-events: none;
     cursor: default;
 }
+
