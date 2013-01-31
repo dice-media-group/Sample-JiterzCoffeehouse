@@ -69,17 +69,16 @@
 			.done(function(result) {
 				var len = result.length,
 				    pinImage = new google.maps.MarkerImage(
-                                    "../images/cofeeCup-sprite.png",
+                                    "images/cofeeCup-sprite.png",
                                     new google.maps.Size(49, 49),
-                                    new google.maps.Point(0, 202),
-                                    new google.maps.Point(0, 32)
+                                    new google.maps.Point(0, 202)
                                     );
 
 				for (var i = 0; i < len; i++) {
 					locations.push({
 						title: result[i].WalkInAddressDisplayStrings[0] + ", " + result[i].WalkInAddressDisplayStrings[1],
 						position: new google.maps.LatLng(result[i].WalkInAddress.Coordinates.Latitude, result[i].WalkInAddress.Coordinates.Longitude),
-						icon: pinImage,
+                        icon: pinImage,
 						animation: google.maps.Animation.DROP
 					});
 				}
@@ -161,7 +160,7 @@
 		},
         
 		onAddCardViewShow: function () {
-			$('#cardNumberField').focus();
+            addCardViewModel.resetView();
 		},
         
             

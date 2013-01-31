@@ -8,14 +8,26 @@
         
 	AddCardViewModel = kendo.data.ObservableObject.extend({
 		cardNumber: null,
-		canAddCard: false,
         
 		init: function() {
 			kendo.data.ObservableObject.fn.init.apply(this, [this]);
 			var that = this;
-			that.set("canAddCard", false);
 			that.set("cardNumber", null);
 		},
+        
+        resetView: function() {
+            var that = this;
+            
+            that._reset(); 
+            
+            $("#cardNumberField").keyup(function(e) {
+                if(that._checkIsValid(e.target.value)) {
+                    $("#buttonAddNewCardView").removeClass("isCardValid");
+                } else {
+                    $("#buttonAddNewCardView").addClass("isCardValid");
+                }
+            });
+        },
 
 		addNewCard: function() {
 			var that = this,
@@ -41,9 +53,9 @@
 			    var currentAmount = Math.floor((Math.random() * 100) + 10),
         			bonusPoints = Math.floor(Math.random() * 100),
         			currentDate = new Date(),    
-        			expireDate = currentDate.setFullYear(currentDate.getFullYear() + 2),
+                    expireDate = new Date(currentDate.setFullYear(currentDate.getFullYear() + 2)),
                     cardToAdd;
-                
+
 			cardToAdd = {
 				cardNumber : cardNumberValue,
 				amount: currentAmount,
@@ -71,7 +83,16 @@
 			var isDublicate = cardsViewModel.cardNumbers().hasOwnProperty(cardNumberValue);
 			
             return isDublicate;
-		}
+		},
+        
+        _reset: function() {
+            var $cardNumberFild = $('#cardNumberField'),
+            $buttonAddNewCard = $('#buttonAddNewCardView');
+            
+            $cardNumberFild.focus();
+            $cardNumberFild.val("");
+            $($buttonAddNewCard).addClass("isCardValid");
+        }
 	});
 
 	CardsViewModelBase = kendo.data.ObservableObject.extend({

@@ -450,3 +450,9 @@ input::-webkit-inner-spin-button {
     cursor: default;
 }
 
+#buttonAddNewCardView.isCardValid {
+    opacity:0.5;
+    pointer-events: none;
+    cursor: default;
+}
+
