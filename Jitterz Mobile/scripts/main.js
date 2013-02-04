@@ -45,7 +45,7 @@
 			latlng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
 				
 			myOptions = {
-				zoom: 12,
+				zoom: 11,
 				center: latlng,
 				mapTypeControl: false,
 				navigationControlOptions: { style: google.maps.NavigationControlStyle.SMALL },
@@ -216,7 +216,7 @@
 				return;
 			}
     
-			_private.getLocation()
+			_private.getLocation() 
 			.done(function(position) { 
 				_private.initStoreList(position);
 				_private.initMap(position); 
@@ -228,6 +228,7 @@
 			if (_isOnline === true) {
 				$("#stores").show();
 				$(".offline").hide();
+                google.maps.event.trigger(map, "resize");
 			}
 			else {
 				$("#stores").hide();
