@@ -34,7 +34,7 @@
     "2"
   ],
   "iOSBackgroundMode": [],
-  "FrameworkVersion": "3.5.0",
+  "FrameworkVersion": "3.7.0",
   "CorePlugins": [
     "org.apache.cordova.geolocation",
     "org.apache.cordova.splashscreen",
@@ -54,5 +54,6 @@
   "WP8Publisher": "",
   "WP8Capabilities": [],
   "WP8Requirements": [],
-  "Framework": "Cordova"
+  "Framework": "Cordova",
+  "projectVersion": "1"
 }
