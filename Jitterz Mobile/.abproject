@@ -3,7 +3,6 @@
   "ProjectTypeGuids": "{070BCB52-5A75-4F8C-A973-144AF0EAFCC9}",
   "AppIdentifier": "com.telerik.JitterzMobile",
   "ProjectName": "Jitterz Mobile",
-  "IsRunnable": "true",
   "AndroidPermissions": [
     "android.permission.ACCESS_COARSE_LOCATION",
     "android.permission.ACCESS_FINE_LOCATION",
@@ -33,7 +32,6 @@
     "1",
     "2"
   ],
-  "iOSBackgroundMode": [],
   "FrameworkVersion": "3.5.0",
   "CorePlugins": [
     "org.apache.cordova.geolocation",
@@ -50,7 +48,5 @@
   "Description": "Jitterz Mobile",
   "WP8TileTitle": "",
   "WP8Publisher": "",
-  "WP8Capabilities": [],
-  "WP8Requirements": [],
   "Framework": "Cordova"
 }
