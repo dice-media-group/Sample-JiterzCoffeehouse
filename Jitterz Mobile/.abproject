@@ -39,9 +39,9 @@
 	],
 	"DisplayName": "JiterzCoffeehouse",
 	"WP8SupportedResolutions": [
+		"ID_RESOLUTION_HD720P",
 		"ID_RESOLUTION_WVGA",
-		"ID_RESOLUTION_WXGA",
-		"ID_RESOLUTION_HD720P"
+		"ID_RESOLUTION_WXGA"
 	],
 	"Author": "",
 	"WP8Publisher": "",
@@ -50,8 +50,10 @@
 	"iOSBackgroundMode": [],
 	"WP8Requirements": [],
 	"Description": "Jitterz Mobile",
-	"WP8TileTitle": "",
-	"WP8Publisher": "",
 	"Framework": "Cordova",
-	"projectVersion": 1
+	"projectVersion": 1,
+	"WP8PublisherID": "{5ae99223-2b07-4c64-9f82-b7310c5358a1}",
+	"WP8ProductID": "{f01bd691-55ae-4f0e-908a-9018f4703ea0}",
+	"WP8PackageIdentityName": "1234Telerik.com.telerik.JitterzMobile",
+	"WP8WindowsPublisherName": "CN=Telerik"
 }
