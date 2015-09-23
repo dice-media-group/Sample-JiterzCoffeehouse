@@ -6,8 +6,6 @@ Jiterz Coffee House
 
 This sample app is a coffee house app for regular customers, developed with Apache Cordova, Kendo UI and Google Maps API. This app assumes that you're already logged in, lets you check your newsfeed and manage your cards and rewards. You can also look for coffee stores near you. 
 
-> *Last updated:* September 17, 2015
-> 
 > *Supported mobile platforms:* iOS, Android, Windows Phone
 >
 > *Developed with:* Apache Cordova 3.7.0, Kendo UI Mobile v2013.3.1517, Google Maps API
