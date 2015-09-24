@@ -1,8 +1,14 @@
-Jiterz Coffee House
+Jitterz Coffee House
 ========================
 <a href="https://platform.telerik.com/#appbuilder/clone/https%3A%2F%2Fgithub.com%2FIcenium%2FSample-JiterzCoffeehouses" target="_blank"><img src="http://docs.telerik.com/platform/appbuilder/sample-apps/images/try-in-appbuilder.png" alt="Try in AppBuilder" title="Try in AppBuilder" /></a>  <a href="https://github.com/Icenium/Sample-JiterzCoffeehouse" target="_blank"><img style="padding-left:20px" src="http://docs.telerik.com/platform/appbuilder/sample-apps/images/get-github.png" alt="Get from GitHub" title="Get from GitHub"></a>
 
-## Overview
+<a id="top"></a>
+* [Overview](#overview)
+* [Showcased APIs](#showcased-apis)
+* [Screenshots](#screenshots)
+* [Test the Sample](#test-the-sample)
+
+# Overview
 
 This sample app is a coffee house app for regular customers, developed with Apache Cordova, Kendo UI and Google Maps API. This app assumes that you're already logged in, lets you check your newsfeed and manage your cards and rewards. You can also look for coffee stores near you. 
 
@@ -10,7 +16,9 @@ This sample app is a coffee house app for regular customers, developed with Apac
 >
 > *Developed with:* Apache Cordova 3.7.0, Kendo UI Mobile v2013.3.1517, Google Maps API
 
-## Showcased APIs
+[Back to Top](#top)
+
+# Showcased APIs
 
 This sample shows how to use the following widgets and features of Kendo UI Mobile.
 
@@ -36,37 +44,45 @@ This sample shows how to use the following Apache Cordova APIs and core plugins.
 
 This sample shows how to use the **[Google Maps JavaScript API][Google Maps JavaScript API]**.
 
-### ScreenShots
+[Back to Top](#top)
 
-#### iOS
+# ScreenShots
 
-Home | Cards | Select Card | Select Card - Back | Add Card
----|---|---|---|---
-![](screenshots/ios/home.png) | ![](screenshots/ios/cards.png) | ![](screenshots/ios/card-info.png) | ![](screenshots/ios/card-info-back.png) | ![](screenshots/ios/card-add.png)
-
-Rewards | Select Reward | Select Reward - Back | Stores (Map) | Stores (List)
----|---|---|---|---
-![](screenshots/ios/rewards.png) | ![](screenshots/ios/reward-info.png) | ![](screenshots/ios/reward-info-back.png) | ![](screenshots/ios/stores-map.png) | ![](screenshots/ios/stores-list.png)
-
-#### Android
+### iOS
 
 Home | Cards | Select Card | Select Card - Back | Add Card
 ---|---|---|---|---
-![](screenshots/android/home.png) | ![](screenshots/android/cards.png) | ![](screenshots/android/card-info.png) | ![](screenshots/android/card-info-back.png) | ![](screenshots/android/card-add.png)
+![](https://github.com/Icenium/Sample-JiterzCoffeehouse/blob/master/screenshots/ios/home.png) | ![](https://github.com/Icenium/Sample-JiterzCoffeehouse/blob/master/screenshots/ios/cards.png) | ![](https://github.com/Icenium/Sample-JiterzCoffeehouse/blob/master/screenshots/ios/card-info.png) | ![](https://github.com/Icenium/Sample-JiterzCoffeehouse/blob/master/screenshots/ios/card-info-back.png) | ![](https://github.com/Icenium/Sample-JiterzCoffeehouse/blob/master/screenshots/ios/card-add.png)
 
 Rewards | Select Reward | Select Reward - Back | Stores (Map) | Stores (List)
 ---|---|---|---|---
-![](screenshots/android/rewards.png) | ![](screenshots/android/reward-info.png) | ![](screenshots/android/reward-info-back.png) | ![](screenshots/android/stores-map.png) | ![](screenshots/android/stores-list.png)
+![](https://github.com/Icenium/Sample-JiterzCoffeehouse/blob/master/screenshots/ios/rewards.png) | ![](https://github.com/Icenium/Sample-JiterzCoffeehouse/blob/master/screenshots/ios/reward-info.png) | ![](https://github.com/Icenium/Sample-JiterzCoffeehouse/blob/master/screenshots/ios/reward-info-back.png) | ![](https://github.com/Icenium/Sample-JiterzCoffeehouse/blob/master/screenshots/ios/stores-map.png) | ![](https://github.com/Icenium/Sample-JiterzCoffeehouse/blob/master/screenshots/ios/stores-list.png)
 
-#### Windows Phone
+### Android
 
 Home | Cards | Select Card | Select Card - Back | Add Card
 ---|---|---|---|---
-![](screenshots/wp/home.png) | ![](screenshots/wp/cards.png) | ![](screenshots/wp/card-info.png) | ![](screenshots/wp/card-info-back.png) | ![](screenshots/wp/card-add.png)
+![](https://github.com/Icenium/Sample-JiterzCoffeehouse/blob/master/screenshots/android/home.png) | ![](https://github.com/Icenium/Sample-JiterzCoffeehouse/blob/master/screenshots/android/cards.png) | ![](https://github.com/Icenium/Sample-JiterzCoffeehouse/blob/master/screenshots/android/card-info.png) | ![](https://github.com/Icenium/Sample-JiterzCoffeehouse/blob/master/screenshots/android/card-info-back.png) | ![](https://github.com/Icenium/Sample-JiterzCoffeehouse/blob/master/screenshots/android/card-add.png)
 
 Rewards | Select Reward | Select Reward - Back | Stores (Map) | Stores (List)
 ---|---|---|---|---
-![](screenshots/wp/rewards.png) | ![](screenshots/wp/reward-info.png) | ![](screenshots/wp/reward-info-back.png) | ![](screenshots/wp/stores-map.png) | ![](screenshots/wp/stores-list.png)
+![](https://github.com/Icenium/Sample-JiterzCoffeehouse/blob/master/screenshots/android/rewards.png) | ![](https://github.com/Icenium/Sample-JiterzCoffeehouse/blob/master/screenshots/android/reward-info.png) | ![](https://github.com/Icenium/Sample-JiterzCoffeehouse/blob/master/screenshots/android/reward-info-back.png) | ![](https://github.com/Icenium/Sample-JiterzCoffeehouse/blob/master/screenshots/android/stores-map.png) | ![](https://github.com/Icenium/Sample-JiterzCoffeehouse/blob/master/screenshots/android/stores-list.png)
+
+### Windows Phone
+
+Home | Cards | Select Card | Select Card - Back | Add Card
+---|---|---|---|---
+![](https://github.com/Icenium/Sample-JiterzCoffeehouse/blob/master/screenshots/wp/home.png) | ![](https://github.com/Icenium/Sample-JiterzCoffeehouse/blob/master/screenshots/wp/cards.png) | ![](https://github.com/Icenium/Sample-JiterzCoffeehouse/blob/master/screenshots/wp/card-info.png) | ![](https://github.com/Icenium/Sample-JiterzCoffeehouse/blob/master/screenshots/wp/card-info-back.png) | ![](https://github.com/Icenium/Sample-JiterzCoffeehouse/blob/master/screenshots/wp/card-add.png)
+
+Rewards | Select Reward | Select Reward - Back | Stores (Map) | Stores (List)
+---|---|---|---|---
+![](https://github.com/Icenium/Sample-JiterzCoffeehouse/blob/master/screenshots/wp/rewards.png) | ![](https://github.com/Icenium/Sample-JiterzCoffeehouse/blob/master/screenshots/wp/reward-info.png) | ![](https://github.com/Icenium/Sample-JiterzCoffeehouse/blob/master/screenshots/wp/reward-info-back.png) | ![](https://github.com/Icenium/Sample-JiterzCoffeehouse/blob/master/screenshots/wp/stores-map.png) | ![](https://github.com/Icenium/Sample-JiterzCoffeehouse/blob/master/screenshots/wp/stores-list.png)
+
+[Back to Top](#top)
+
+# Test the Sample
+
+Apart from exploring the sample code base in GitHub, you can also clone and run the sample in your preferred AppBuilder client.
 
 ## In-Browser
 
@@ -82,6 +98,8 @@ With the AppBuilder in-browser client, you can develop hybrid and NativeScript c
 1. [Run in the device simulator.][device simulator]
 1. [Run in the companion app.][companion]
 1. [Deploy on device via QR code.][QR code]
+
+[Back to Top](#top)
 
 ## Windows
 
@@ -106,6 +124,8 @@ With the AppBuilder Windows client, you can quickly test your apps on device, in
 1. [Run in the native emulators.][emulators]
 1. [Deploy on device via QR code.][QR code]
 1. [Deploy via cable connection.][USB deploy]
+
+[Back to Top](#top)
 
 ## Visual Studio
 
@@ -132,6 +152,8 @@ With the AppBuilder extension for Visual Studio, you can quickly test your apps 
 1. [Run in the native emulators.][emulators]
 1. [Deploy on device via QR code.][QR code]
 1. [Deploy via cable connection.][USB deploy]
+
+[Back to Top](#top)
 
 ## CLI
 
@@ -162,6 +184,8 @@ With the AppBuilder command-line interface, you can quickly test your apps on de
 1. [Run in the native emulators.][emulators]
 1. [Deploy on device via QR code.][QR code]
 1. [Deploy via cable connection.][USB deploy]
+
+[Back to Top](#top)
 
 [device simulator]: http://docs.telerik.com/platform/appbuilder/testing-your-app/running-apps-in-simulator/launch-simulator
 [companion]: http://docs.telerik.com/platform/appbuilder/testing-your-app/running-on-devices/run-companion/using-appbuilder-companion-app
