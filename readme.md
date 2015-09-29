@@ -52,31 +52,31 @@ This sample shows how to use the **[Google Maps JavaScript API][Google Maps Java
 
 Home | Cards | Select Card | Select Card - Back | Add Card
 ---|---|---|---|---
-![](https://github.com/Icenium/Sample-JiterzCoffeehouse/blob/master/screenshots/ios/home.png) | ![](https://github.com/Icenium/Sample-JiterzCoffeehouse/blob/master/screenshots/ios/cards.png) | ![](https://github.com/Icenium/Sample-JiterzCoffeehouse/blob/master/screenshots/ios/card-info.png) | ![](https://github.com/Icenium/Sample-JiterzCoffeehouse/blob/master/screenshots/ios/card-info-back.png) | ![](https://github.com/Icenium/Sample-JiterzCoffeehouse/blob/master/screenshots/ios/card-add.png)
+![](https://raw.githubusercontent.com/Icenium/Sample-JiterzCoffeehouse/master/screenshots/ios/home.png) | ![](https://raw.githubusercontent.com/Icenium/Sample-JiterzCoffeehouse/master/screenshots/ios/cards.png) | ![](https://raw.githubusercontent.com/Icenium/Sample-JiterzCoffeehouse/master/screenshots/ios/card-info.png) | ![](https://raw.githubusercontent.com/Icenium/Sample-JiterzCoffeehouse/master/screenshots/ios/card-info-back.png) | ![](https://raw.githubusercontent.com/Icenium/Sample-JiterzCoffeehouse/master/screenshots/ios/card-add.png)
 
 Rewards | Select Reward | Select Reward - Back | Stores (Map) | Stores (List)
 ---|---|---|---|---
-![](https://github.com/Icenium/Sample-JiterzCoffeehouse/blob/master/screenshots/ios/rewards.png) | ![](https://github.com/Icenium/Sample-JiterzCoffeehouse/blob/master/screenshots/ios/reward-info.png) | ![](https://github.com/Icenium/Sample-JiterzCoffeehouse/blob/master/screenshots/ios/reward-info-back.png) | ![](https://github.com/Icenium/Sample-JiterzCoffeehouse/blob/master/screenshots/ios/stores-map.png) | ![](https://github.com/Icenium/Sample-JiterzCoffeehouse/blob/master/screenshots/ios/stores-list.png)
+![](https://raw.githubusercontent.com/Icenium/Sample-JiterzCoffeehouse/master/screenshots/ios/rewards.png) | ![](https://raw.githubusercontent.com/Icenium/Sample-JiterzCoffeehouse/master/screenshots/ios/reward-info.png) | ![](https://raw.githubusercontent.com/Icenium/Sample-JiterzCoffeehouse/master/screenshots/ios/reward-info-back.png) | ![](https://raw.githubusercontent.com/Icenium/Sample-JiterzCoffeehouse/master/screenshots/ios/stores-map.png) | ![](https://raw.githubusercontent.com/Icenium/Sample-JiterzCoffeehouse/master/screenshots/ios/stores-list.png)
 
 ### Android
 
 Home | Cards | Select Card | Select Card - Back | Add Card
 ---|---|---|---|---
-![](https://github.com/Icenium/Sample-JiterzCoffeehouse/blob/master/screenshots/android/home.png) | ![](https://github.com/Icenium/Sample-JiterzCoffeehouse/blob/master/screenshots/android/cards.png) | ![](https://github.com/Icenium/Sample-JiterzCoffeehouse/blob/master/screenshots/android/card-info.png) | ![](https://github.com/Icenium/Sample-JiterzCoffeehouse/blob/master/screenshots/android/card-info-back.png) | ![](https://github.com/Icenium/Sample-JiterzCoffeehouse/blob/master/screenshots/android/card-add.png)
+![](https://raw.githubusercontent.com/Icenium/Sample-JiterzCoffeehouse/master/screenshots/android/home.png) | ![](https://raw.githubusercontent.com/Icenium/Sample-JiterzCoffeehouse/master/screenshots/android/cards.png) | ![](https://raw.githubusercontent.com/Icenium/Sample-JiterzCoffeehouse/master/screenshots/android/card-info.png) | ![](https://raw.githubusercontent.com/Icenium/Sample-JiterzCoffeehouse/master/screenshots/android/card-info-back.png) | ![](https://raw.githubusercontent.com/Icenium/Sample-JiterzCoffeehouse/master/screenshots/android/card-add.png)
 
 Rewards | Select Reward | Select Reward - Back | Stores (Map) | Stores (List)
 ---|---|---|---|---
-![](https://github.com/Icenium/Sample-JiterzCoffeehouse/blob/master/screenshots/android/rewards.png) | ![](https://github.com/Icenium/Sample-JiterzCoffeehouse/blob/master/screenshots/android/reward-info.png) | ![](https://github.com/Icenium/Sample-JiterzCoffeehouse/blob/master/screenshots/android/reward-info-back.png) | ![](https://github.com/Icenium/Sample-JiterzCoffeehouse/blob/master/screenshots/android/stores-map.png) | ![](https://github.com/Icenium/Sample-JiterzCoffeehouse/blob/master/screenshots/android/stores-list.png)
+![](https://raw.githubusercontent.com/Icenium/Sample-JiterzCoffeehouse/master/screenshots/android/rewards.png) | ![](https://raw.githubusercontent.com/Icenium/Sample-JiterzCoffeehouse/master/screenshots/android/reward-info.png) | ![](https://raw.githubusercontent.com/Icenium/Sample-JiterzCoffeehouse/master/screenshots/android/reward-info-back.png) | ![](https://raw.githubusercontent.com/Icenium/Sample-JiterzCoffeehouse/master/screenshots/android/stores-map.png) | ![](https://raw.githubusercontent.com/Icenium/Sample-JiterzCoffeehouse/master/screenshots/android/stores-list.png)
 
 ### Windows Phone
 
 Home | Cards | Select Card | Select Card - Back | Add Card
 ---|---|---|---|---
-![](https://github.com/Icenium/Sample-JiterzCoffeehouse/blob/master/screenshots/wp/home.png) | ![](https://github.com/Icenium/Sample-JiterzCoffeehouse/blob/master/screenshots/wp/cards.png) | ![](https://github.com/Icenium/Sample-JiterzCoffeehouse/blob/master/screenshots/wp/card-info.png) | ![](https://github.com/Icenium/Sample-JiterzCoffeehouse/blob/master/screenshots/wp/card-info-back.png) | ![](https://github.com/Icenium/Sample-JiterzCoffeehouse/blob/master/screenshots/wp/card-add.png)
+![](https://raw.githubusercontent.com/Icenium/Sample-JiterzCoffeehouse/master/screenshots/wp/home.png) | ![](https://raw.githubusercontent.com/Icenium/Sample-JiterzCoffeehouse/master/screenshots/wp/cards.png) | ![](https://raw.githubusercontent.com/Icenium/Sample-JiterzCoffeehouse/master/screenshots/wp/card-info.png) | ![](https://raw.githubusercontent.com/Icenium/Sample-JiterzCoffeehouse/master/screenshots/wp/card-info-back.png) | ![](https://raw.githubusercontent.com/Icenium/Sample-JiterzCoffeehouse/master/screenshots/wp/card-add.png)
 
 Rewards | Select Reward | Select Reward - Back | Stores (Map) | Stores (List)
 ---|---|---|---|---
-![](https://github.com/Icenium/Sample-JiterzCoffeehouse/blob/master/screenshots/wp/rewards.png) | ![](https://github.com/Icenium/Sample-JiterzCoffeehouse/blob/master/screenshots/wp/reward-info.png) | ![](https://github.com/Icenium/Sample-JiterzCoffeehouse/blob/master/screenshots/wp/reward-info-back.png) | ![](https://github.com/Icenium/Sample-JiterzCoffeehouse/blob/master/screenshots/wp/stores-map.png) | ![](https://github.com/Icenium/Sample-JiterzCoffeehouse/blob/master/screenshots/wp/stores-list.png)
+![](https://raw.githubusercontent.com/Icenium/Sample-JiterzCoffeehouse/master/screenshots/wp/rewards.png) | ![](https://raw.githubusercontent.com/Icenium/Sample-JiterzCoffeehouse/master/screenshots/wp/reward-info.png) | ![](https://raw.githubusercontent.com/Icenium/Sample-JiterzCoffeehouse/master/screenshots/wp/reward-info-back.png) | ![](https://raw.githubusercontent.com/Icenium/Sample-JiterzCoffeehouse/master/screenshots/wp/stores-map.png) | ![](https://raw.githubusercontent.com/Icenium/Sample-JiterzCoffeehouse/master/screenshots/wp/stores-list.png)
 
 [Back to Top](#top)
 
