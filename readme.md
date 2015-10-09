@@ -200,12 +200,12 @@ With the AppBuilder command-line interface, you can quickly test your apps on de
 [Button]: http://docs.telerik.com/kendo-ui/api/javascript/mobile/ui/button
 [ListView]: http://docs.telerik.com/kendo-ui/api/javascript/mobile/ui/listview
 [ObservableObject]: http://docs.telerik.com/kendo-ui/api/javascript/data/observableobject
-[Geolocation]: https://github.com/apache/cordova-plugin-geolocation/blob/master/doc/index.md
+[Geolocation]: https://www.npmjs.com/package/cordova-plugin-geolocation
 [ActionSheet]: http://docs.telerik.com/kendo-ui/api/javascript/mobile/ui/actionsheet
 [BackButton]: http://docs.telerik.com/kendo-ui/api/javascript/mobile/ui/backbutton
 [Templates]: http://docs.telerik.com/kendo-ui/framework/templates/overview
 [Splashscreen]: http://plugins.cordova.io/#/package/org.apache.cordova.splashscreen
 [Geolocation]: http://plugins.cordova.io/#/package/org.apache.cordova.geolocation
-[LocalStorage]: http://cordova.apache.org/docs/en/3.6.0/cordova_storage_storage.md.html#Storage
+[LocalStorage]: http://cordova.apache.org/docs/en/4.0.0/cordova/storage/storage.html#link-1#Storage
 [ButtonGroup]: http://docs.telerik.com/KENDO-UI/api/javascript/mobile/ui/buttongroup
 [Layout]: http://docs.telerik.com/kendo-ui/api/javascript/mobile/ui/layout
