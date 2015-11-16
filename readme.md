@@ -18,34 +18,6 @@ This sample app is a coffee house app for regular customers, developed with Apac
 
 [Back to Top](#top)
 
-# Showcased APIs
-
-This sample shows how to use the following widgets and features of Kendo UI Mobile.
-
-* **[Kendo MVVM][Kendo MVVM]:** Model View ViewModel (MVVM) is a design pattern which helps developers separate the Model (the data) from the View (the UI). The View-Model part of MVVM is responsible for exposing the data objects from the Model in such a way that those objects are easily consumed in the View.
-* **[Application][Application]:** The widget provides the necessary tools for building native-looking web based mobile applications.
-* **[ActionSheet][ActionSheet]:** The widget displays a list of choices related to a task initiated by the user.
-* **[BackButton][BackButton]:** The widget lets you navigate to the last visited view.
-* **[Button][Button]:** The widget navigates to a mobile View or executes a custom callback when tapped.
-* **[ButtonGroup][ButtonGroup]:** The widget provides a linear set of grouped buttons.
-* **[Layout][Layout]:** The widget lets you share headers and footers between views.
-* **[View][View]:** The widget represents a screen in the Kendo mobile Application.
-* **[ListView][ListView]:** The widget displays flat or grouped list of items.
-* **[Tabstrip][Tabstrip]:** The widget displays an application-wide group of navigation buttons. The look of the mobile TabStrip changes depending on the user mobile device and operating system.
-* **[NavBar][NavBar]:** The widget displays an application navigation bar. The mobile NavBar may display the current view title in the center, and optionally some additional left and right aligned widgets (a back button, settings button, etc.).
-* **[ObservableObject][ObservableObject]:** The kendo.data.ObservableObject is the building block of Kendo MVVM.
-* **[Templates][Templates]:** The Kendo templates provide a simple to use, high-performance JavaScript templating engine to let you create HTML chunks that can be automatically merged with JavaScript data.
-
-This sample shows how to use the following Apache Cordova APIs and core plugins.
-
-* **[Splashscreen][Splashscreen]:** The plugin lets you show or hide the splashscreen programmatically.
-* **[Geolocation][Geolocation]:** The plugin provides information about the location of the device.
-* **[LocalStorage][LocalStorage]:** This API provides synchronous key/value pair storage.
-
-This sample shows how to use the **[Google Maps JavaScript API][Google Maps JavaScript API]**.
-
-[Back to Top](#top)
-
 # ScreenShots
 
 ### iOS
@@ -192,20 +164,3 @@ With the AppBuilder command-line interface, you can quickly test your apps on de
 [QR code]: http://docs.telerik.com/platform/appbuilder/testing-your-app/running-on-devices/deploy-remote
 [USB deploy]: http://docs.telerik.com/platform/appbuilder/testing-your-app/running-on-devices/running-on-connected-devices/deploy-connected
 [emulators]: http://docs.telerik.com/platform/appbuilder/testing-your-app/running-in-emulators/native-emulators
-[Kendo MVVM]: http://docs.telerik.com/kendo-ui/framework/mvvm/overview
-[Application]: http://docs.telerik.com/kendo-ui/mobile/application
-[View]: http://docs.telerik.com/kendo-ui/api/javascript/mobile/ui/view
-[Tabstrip]: http://docs.telerik.com/kendo-ui/api/javascript/mobile/ui/tabstrip
-[NavBar]: http://docs.telerik.com/kendo-ui/api/javascript/mobile/ui/navbar
-[Button]: http://docs.telerik.com/kendo-ui/api/javascript/mobile/ui/button
-[ListView]: http://docs.telerik.com/kendo-ui/api/javascript/mobile/ui/listview
-[ObservableObject]: http://docs.telerik.com/kendo-ui/api/javascript/data/observableobject
-[Geolocation]: https://www.npmjs.com/package/cordova-plugin-geolocation
-[ActionSheet]: http://docs.telerik.com/kendo-ui/api/javascript/mobile/ui/actionsheet
-[BackButton]: http://docs.telerik.com/kendo-ui/api/javascript/mobile/ui/backbutton
-[Templates]: http://docs.telerik.com/kendo-ui/framework/templates/overview
-[Splashscreen]: http://plugins.cordova.io/#/package/org.apache.cordova.splashscreen
-[Geolocation]: http://plugins.cordova.io/#/package/org.apache.cordova.geolocation
-[LocalStorage]: http://cordova.apache.org/docs/en/4.0.0/cordova/storage/storage.html#link-1#Storage
-[ButtonGroup]: http://docs.telerik.com/KENDO-UI/api/javascript/mobile/ui/buttongroup
-[Layout]: http://docs.telerik.com/kendo-ui/api/javascript/mobile/ui/layout
