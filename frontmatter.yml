@@ -5,3 +5,4 @@ description: This demo app shows how to create a payment and reward management a
 tags: Kendo UI, Google Maps API, iOS, Android, Windows Phone, Apache Cordova, hybrid development, JavaScript, MVVM, view, layout, template, navbar, tabstrip, button
 publish: true
 content_filter: true
+apis: kendo.mvvm kendo.observableObject kendo.application kendo.templates kendo.layout kendo.view kendo.tabStrip kendo.navBar kendo.button kendo.listView kendo.actionSheet kendo.backButton kendo.buttonGroup cordova.geolocation cordova.splashscreen cordova.localStorage google.maps
