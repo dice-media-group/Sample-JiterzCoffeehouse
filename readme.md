@@ -1,10 +1,9 @@
 Jitterz Coffee House
 ========================
-<a href="https://platform.telerik.com/#appbuilder/clone/https%3A%2F%2Fgithub.com%2FIcenium%2FSample-JiterzCoffeehouse" target="_blank"><img src="http://docs.telerik.com/platform/samples/images/try-in-appbuilder.png" alt="Try in AppBuilder" title="Try in AppBuilder" /></a>  <a href="https://github.com/Icenium/Sample-JiterzCoffeehouse" target="_blank"><img style="padding-left:20px" src="http://docs.telerik.com/platform/samples/images/get-github.png" alt="Get from GitHub" title="Get from GitHub"></a>
+<a href="https://platform.telerik.com/#appbuilder/clone/https%3A%2F%2Fgithub.com%2FIcenium%2FSample-JiterzCoffeehouse" target="_blank"><img src="http://docs.telerik.com/platform/samples/images/try-in-appbuilder.png" alt="Try in AppBuilder" title="Try in AppBuilder" /></a>  
 
 <a id="top"></a>
 * [Overview](#overview)
-* [Showcased APIs](#showcased-apis)
 * [Screenshots](#screenshots)
 * [Test the Sample](#test-the-sample)
 
