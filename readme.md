@@ -13,7 +13,7 @@ This sample app is a coffee house app for regular customers, developed with Apac
 
 > *Supported mobile platforms:* iOS, Android, Windows Phone
 >
-> *Developed with:* Apache Cordova 3.7.0, Kendo UI Mobile v2013.3.1517, Google Maps API
+> *Developed with:* Windows Phone SDK 8.1, Apache Cordova 3.7.0, Kendo UI Mobile v2015.3.1116, Google Maps API
 
 [Back to Top](#top)
 
