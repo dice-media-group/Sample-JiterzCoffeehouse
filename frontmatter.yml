@@ -6,3 +6,6 @@ tags: Kendo UI, Google Maps API, iOS, Android, Windows Phone, Apache Cordova, hy
 publish: true
 content_filter: true
 apis: kendo.mvvm kendo.observableObject kendo.application kendo.templates kendo.layout kendo.view kendo.tabStrip kendo.navBar kendo.button kendo.listView kendo.actionSheet kendo.backButton kendo.buttonGroup cordova.geolocation cordova.splashscreen cordova.localStorage google.maps
+related_resources:
+- "[Create from Sample](http://docs.telerik.com/platform/appbuilder/cordova/creating-your-app/clone-from-sample)"
+- "[Running Hybrid Apps on Devices](http://docs.telerik.com/platform/appbuilder/cordova/running-on-devices/working-with-devices)"
