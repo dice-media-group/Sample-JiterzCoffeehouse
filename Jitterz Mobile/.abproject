@@ -26,16 +26,17 @@
 	"iOSStatusBarStyle": "Default",
 	"BundleVersion": "1.0",
 	"AndroidVersionCode": "1",
-	"AndroidHardwareAcceleration": "false",
+	"AndroidHardwareAcceleration": "true",
 	"iOSDeviceFamily": [
 		"1",
 		"2"
 	],
-	"FrameworkVersion": "3.7.0",
+	"FrameworkVersion": "4.0.0",
 	"CorePlugins": [
-		"org.apache.cordova.geolocation",
-		"org.apache.cordova.splashscreen",
-		"org.apache.cordova.statusbar"
+		"cordova-plugin-geolocation",
+		"cordova-plugin-splashscreen",
+		"cordova-plugin-statusbar",
+		"cordova-plugin-whitelist"
 	],
 	"DisplayName": "JiterzCoffeehouse",
 	"WP8SupportedResolutions": [
