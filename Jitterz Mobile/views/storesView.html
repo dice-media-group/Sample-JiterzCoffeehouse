@@ -1,6 +1,6 @@
 <div id="stores" 
      data-role="view" data-title="Stores" data-style="inset"
-     data-init="storesInit" data-show="onStoresShow"
+     data-init="storesInit" data-show="onStoresShow" data-stretch="true"
      data-model="storesListViewModel">
     <header data-role="header">
         <div data-role="navbar">
@@ -10,11 +10,13 @@
             </ul>
         </div>
     </header>
-    <div id="storesContent">
+    <div data-role="content" id="storesContent">
+        <div data-role="scroller">
+            <ul id="storeList" data-role="listview" data-style="inset" style="display:none"
+                data-template="tmplStoreListItem" data-bind="source: stores">
+            </ul>
+        </div>
         <div id="map"></div>
-        <ul id="storeList" data-role="listview" data-style="inset" style="display:none"
-            data-template="tmplStoreListItem" data-bind="source: stores">
-        </ul>
     </div>
     <span id="offline">Please reconnect to Internet.</span>
 </div>
